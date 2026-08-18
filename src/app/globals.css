@@ -228,3 +228,7 @@ section {
     font-size: clamp(2.5rem, 8vw, 4rem);
   }
 }
+
+/* Protecciones anti-descarga */
+video, img { -webkit-user-drag: none; user-select: none; }
+

@@ -292,6 +292,9 @@ function ExampleCard({
             muted
             playsInline
             preload="metadata"
+            onContextMenu={(e) => e.preventDefault()}
+            controlsList="nodownload"
+            disablePictureInPicture
             onLoadedData={() => setLoaded(true)}
             style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0, display: "block", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease", zIndex: 2 }}
           />
@@ -301,6 +304,8 @@ function ExampleCard({
             alt={label}
             fill
             loading="lazy"
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
             onLoad={() => setLoaded(true)}
             style={{ objectFit: "cover", objectPosition: "center", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease", zIndex: 2 }}
             sizes="(max-width: 768px) 300px, 400px"
@@ -593,11 +598,14 @@ export default function Portfolio() {
                     autoPlay 
                     loop 
                     controls 
+                    controlsList="nodownload"
+                    disablePictureInPicture
                     playsInline 
+                    onContextMenu={(e) => e.preventDefault()}
                     style={{ width: "100%", height: "100%", objectFit: "contain", position: "relative", zIndex: 2 }} 
                   />
                 ) : (
-                  <Image src={selectedMedia.src} alt={selectedMedia.label} fill style={{ objectFit: "contain", zIndex: 2 }} sizes="100vw" quality={100} priority />
+                  <Image src={selectedMedia.src} alt={selectedMedia.label} fill style={{ objectFit: "contain", zIndex: 2 }} sizes="100vw" quality={100} priority onContextMenu={(e) => e.preventDefault()} draggable={false} />
                 )}
               </div>
             </motion.div>
