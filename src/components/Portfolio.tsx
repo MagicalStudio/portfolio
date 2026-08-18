@@ -255,7 +255,7 @@ function ExampleCard({
         borderRadius: "14px",
         overflow: "hidden",
         border: `1px solid ${hovered ? color + "50" : "rgba(255,255,255,0.08)"}`,
-        cursor: "pointer",
+        cursor: onSelect ? "pointer" : "default",
         transition: "border-color 0.3s ease",
         background: "rgba(255,255,255,0.02)",
       }}
@@ -316,15 +316,17 @@ function ExampleCard({
         ) : null}
 
         {/* Play icon overlay on hover */}
-        <motion.div
-          animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0.8 }}
-          transition={{ duration: 0.2 }}
-          style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.35)", backdropFilter: "blur(4px)", zIndex: 3 }}
-        >
-          <div style={{ width: "42px", height: "42px", borderRadius: "50%", border: `1.5px solid ${color}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <ExternalLink size={16} color={color} />
-          </div>
-        </motion.div>
+        {onSelect && (
+          <motion.div
+            animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0.8 }}
+            transition={{ duration: 0.2 }}
+            style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.35)", backdropFilter: "blur(4px)", zIndex: 3 }}
+          >
+            <div style={{ width: "42px", height: "42px", borderRadius: "50%", border: `1.5px solid ${color}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <ExternalLink size={16} color={color} />
+            </div>
+          </motion.div>
+        )}
 
         {/* Index number */}
         <div style={{ position: "absolute", top: "10px", left: "12px", fontSize: "0.65rem", fontWeight: 700, color: "rgba(255,255,255,0.7)", letterSpacing: "0.05em", zIndex: 4, textShadow: "0 1px 6px rgba(0,0,0,0.9)" }}>
@@ -407,7 +409,7 @@ function CategoryRow({ cat, index, onSelectMedia }: { cat: typeof categories[0];
             {/* Tools */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: "5px", marginBottom: "6px" }}>
               {cat.tools.map((tool) => (
-                <span key={tool} style={{ fontSize: "0.68rem", color: cat.color, fontWeight: 600, padding: "2px 8px", background: cat.colorLight, border: `1px solid ${cat.color}25`, borderRadius: "6px" }}>
+               <span key={tool} style={{ fontSize: "0.68rem", color: cat.color, fontWeight: 600, padding: "2px 8px", background: cat.colorLight, border: `1px solid ${cat.color}25`, borderRadius: "6px" }}>
                   {tool}
                 </span>
               ))}
@@ -469,7 +471,7 @@ function CategoryRow({ cat, index, onSelectMedia }: { cat: typeof categories[0];
               imageSrc={card.imageSrc}
               width={cardWidth}
               height={cardHeight}
-              onSelect={() => (card.videoSrc || card.imageSrc) && onSelectMedia({ 
+              onSelect={cat.id === 3 ? undefined : () => (card.videoSrc || card.imageSrc) && onSelectMedia({ 
                 src: card.videoSrc || card.imageSrc, 
                 type: card.videoSrc ? "video" : "image", 
                 label: card.label, 
