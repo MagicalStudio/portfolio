@@ -6,7 +6,7 @@ import { Globe, Menu, X, ChevronRight } from "lucide-react";
 import { useLang } from "@/context/LangContext";
 
 const navLinks = [
-  { en: "Home", es: "Inicio", href: "#hero" },
+  { en: "Home", es: "Inicio", href: "#home" },
   { en: "Tools", es: "Herramientas", href: "#tools" },
   { en: "Services", es: "Servicios", href: "#services" },
   { en: "Work", es: "Trabajo", href: "#portfolio" },
@@ -43,7 +43,7 @@ export default function Navbar() {
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
           {/* Logo */}
-          <motion.a href="#hero" whileHover={{ scale: 1.02 }} style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "8px" }}>
+          <motion.a href="#home" whileHover={{ scale: 1.02 }} style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "8px" }}>
             <span style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 900, fontSize: "1.35rem", background: "linear-gradient(135deg,#a78bfa,#06b6d4)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>JM</span>
             <span style={{ color: "rgba(255,255,255,0.2)", fontWeight: 300 }}>|</span>
             <span style={{ fontSize: "0.8rem", fontWeight: 400, color: "rgba(255,255,255,0.55)", fontFamily: "'Outfit',sans-serif" }}>Portfolio</span>

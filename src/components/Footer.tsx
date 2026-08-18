@@ -35,7 +35,7 @@ export default function Footer() {
               {t("Explore", "Explorar")}
             </h3>
             
-            <a href="#hero" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#a78bfa"} onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.6)"}>
+            <a href="#home" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#a78bfa"} onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.6)"}>
               {t("Home", "Inicio")}
             </a>
             <a href="#tools" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#a78bfa"} onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.6)"}>

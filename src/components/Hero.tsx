@@ -60,7 +60,7 @@ export default function Hero() {
   const { lang, t } = useLang();
 
   return (
-    <section id="hero" style={{ minHeight: "85vh", display: "flex", alignItems: "center", padding: "160px 24px 90px", position: "relative", overflow: "hidden" }}>
+    <section id="home" style={{ minHeight: "85vh", display: "flex", alignItems: "center", padding: "160px 24px 90px", position: "relative", overflow: "hidden" }}>
 
       {/* 3D Scene */}
       <Suspense fallback={null}>
