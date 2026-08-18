@@ -1,0 +1,17 @@
+name: Deploy to Vercel
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Deploy to Vercel
+        env:
+          VERCEL_ORG_ID: team_8h6mDTKHrbmd2AZ63kpBoiFR
+          VERCEL_PROJECT_ID: prj_FpGqVa9NFGp61AytxbquqOvv02or
+        run: vercel pull --yes --environment=production --token "vcp_4zUuhfW3wtg6CnJu0HpRzPlFv8raWzpaDjzcGknGMssZOGw8jB1STrnP" && vercel build --prod --token "vcp_4zUuhfW3wtg6CnJu0HpRzPlFv8raWzpaDjzcGknGMssZOGw8jB1STrnP" && vercel deploy --prebuilt --prod --token "vcp_4zUuhfW3wtg6CnJu0HpRzPlFv8raWzpaDjzcGknGMssZOGw8jB1STrnP"
