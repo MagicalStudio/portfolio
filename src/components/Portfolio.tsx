@@ -201,13 +201,13 @@ const categories = [
       { label: "AI Living Moment", videoSrc: "/ai-content/ai-2.mp4" },
       { label: "Children Talking", videoSrc: "/ai-content/ai-3.mp4" },
       { label: "Messi Guitarra", videoSrc: "/ai-content/ai-7.mp4" },
-      { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4" },
-      { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4" },
-      { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
       { label: "Man Vs Monster", videoSrc: "/ai-content/ai-9.mp4" },
       { label: "SpongeCat", videoSrc: "/ai-content/ai-10.mp4" },
+      { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4", orientation: "horizontal" },
+      { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4", orientation: "horizontal" },
+      { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4", orientation: "horizontal" },
     ],
-    cardLabels: ["AI Living Moment", "Children Talking", "Messi Guitarra", "Skydiving AI", "Gato Hielo", "Gatos Podcast AI", "Man Vs Monster", "SpongeCat"],
+    cardLabels: ["AI Living Moment", "Children Talking", "Messi Guitarra", "Man Vs Monster", "SpongeCat", "Skydiving AI", "Gato Hielo", "Gatos Podcast AI"],
   },
 ];
 
@@ -452,6 +452,7 @@ function CategoryRow({ cat, index, onSelectMedia }: { cat: typeof categories[0];
           style={{
             display: "flex",
             gap: "14px",
+            alignItems: "center",
             overflowX: "auto",
             paddingBottom: "12px",
             paddingRight: "80px",
@@ -460,25 +461,33 @@ function CategoryRow({ cat, index, onSelectMedia }: { cat: typeof categories[0];
           }}
           className="hide-scrollbar"
         >
-          {((cat as any).cards || cat.cardLabels.map((l: string) => ({ label: l }))).map((card: any, i: number) => (
-            <ExampleCard
-              key={card.label}
-              label={card.label}
-              index={i}
-              color={cat.color}
-              gradient={cat.gradient}
-              videoSrc={card.videoSrc}
-              imageSrc={card.imageSrc}
-              width={cardWidth}
-              height={cardHeight}
-              onSelect={cat.id === 3 ? undefined : () => (card.videoSrc || card.imageSrc) && onSelectMedia({ 
-                src: card.videoSrc || card.imageSrc, 
-                type: card.videoSrc ? "video" : "image", 
-                label: card.label, 
-                color: cat.color 
-              })}
-            />
-          ))}
+          {((cat as any).cards || cat.cardLabels.map((l: string) => ({ label: l }))).map((card: any, i: number) => {
+            let dynamicWidth = cardWidth;
+            let dynamicHeight = cardHeight;
+            if (card.orientation === "horizontal") {
+              dynamicWidth = 320;
+              dynamicHeight = 180;
+            }
+            return (
+              <ExampleCard
+                key={card.label}
+                label={card.label}
+                index={i}
+                color={cat.color}
+                gradient={cat.gradient}
+                videoSrc={card.videoSrc}
+                imageSrc={card.imageSrc}
+                width={dynamicWidth}
+                height={dynamicHeight}
+                onSelect={cat.id === 3 ? undefined : () => (card.videoSrc || card.imageSrc) && onSelectMedia({ 
+                  src: card.videoSrc || card.imageSrc, 
+                  type: card.videoSrc ? "video" : "image", 
+                  label: card.label, 
+                  color: cat.color 
+                })}
+              />
+            );
+          })}
 
           {/* "Coming Soon" card */}
           <div style={{ flexShrink: 0, width: `${cardWidth}px`, borderRadius: "14px", border: "1px dashed rgba(255,255,255,0.1)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "8px", padding: "20px", cursor: "pointer" }}>
