@@ -196,7 +196,7 @@ const categories = [
     color: "#a78bfa",
     colorLight: "rgba(167,139,250,0.12)",
     gradient: "linear-gradient(135deg, #1e1b4b, #4f46e5)",
-    cardCount: 6,
+    cardCount: 8,
     cards: [
       { label: "AI Living Moment", videoSrc: "/ai-content/ai-2.mp4" },
       { label: "Children Talking", videoSrc: "/ai-content/ai-3.mp4" },
@@ -204,8 +204,10 @@ const categories = [
       { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4" },
       { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4" },
       { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
+      { label: "Man Vs Monster", videoSrc: "/ai-content/ai-9.mp4" },
+      { label: "SpongeCat", videoSrc: "/ai-content/ai-10.mp4" },
     ],
-    cardLabels: ["AI Living Moment", "Children Talking", "Messi Guitarra", "Skydiving AI", "Gato Hielo", "Gatos Podcast AI"],
+    cardLabels: ["AI Living Moment", "Children Talking", "Messi Guitarra", "Skydiving AI", "Gato Hielo", "Gatos Podcast AI", "Man Vs Monster", "SpongeCat"],
   },
 ];
 
