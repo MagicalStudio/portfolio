@@ -196,7 +196,7 @@ const categories = [
     color: "#a78bfa",
     colorLight: "rgba(167,139,250,0.12)",
     gradient: "linear-gradient(135deg, #1e1b4b, #4f46e5)",
-    cardCount: 11,
+    cardCount: 12,
     cards: [
       { label: "AI Living Moment", videoSrc: "/ai-content/ai-2.mp4" },
       { label: "Children Talking", videoSrc: "/ai-content/ai-3.mp4" },
@@ -206,11 +206,12 @@ const categories = [
       { label: "AI Characters", videoSrc: "/ai-content/ai-11.mp4" },
       { label: "AI VFX Replace", videoSrc: "/ai-content/ai-12.mp4" },
       { label: "Sal Stewart AI", videoSrc: "/ai-content/ai-13.mp4" },
+      { label: "AI Clone Avatar", videoSrc: "/ai-content/ai-14.mp4" },
       { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
       { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4", orientation: "horizontal" },
       { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4", orientation: "horizontal" },
     ],
-    cardLabels: ["AI Living Moment", "Children Talking", "Messi Guitarra", "Man Vs Monster", "SpongeCat", "AI Characters", "AI VFX Replace", "Sal Stewart AI", "Gatos Podcast AI", "Skydiving AI", "Gato Hielo"],
+    cardLabels: ["AI Living Moment", "Children Talking", "Messi Guitarra", "Man Vs Monster", "SpongeCat", "AI Characters", "AI VFX Replace", "Sal Stewart AI", "AI Clone Avatar", "Gatos Podcast AI", "Skydiving AI", "Gato Hielo"],
   },
 ];
 
