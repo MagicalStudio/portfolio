@@ -521,7 +521,7 @@ export default function Portfolio() {
   const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
 
   return (
-    <section id="portfolio" ref={ref} style={{ padding: "clamp(20px, 5vw, 40px) 24px", position: "relative" }}>
+    <section id="portfolio" ref={ref} style={{ padding: "clamp(20px, 5vw, 40px) 24px", position: "relative", zIndex: selectedMedia ? 99999 : 10 }}>
       {/* Background glow */}
       <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "800px", height: "600px", background: "radial-gradient(ellipse, rgba(124,58,237,0.04) 0%, transparent 70%)", pointerEvents: "none" }} />
 
