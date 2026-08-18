@@ -116,13 +116,15 @@ const categories = [
     color: "#f59e0b",
     colorLight: "rgba(245,158,11,0.12)",
     gradient: "linear-gradient(135deg, #78350f, #d97706)",
-    cardCount: 3,
+    cardCount: 5,
     cards: [
       { label: "MMA Promo", videoSrc: "/motion-graphics/mma-motion-flyer.mp4" },
       { label: "Wine Ad", videoSrc: "/motion-graphics/wine-animated-flyer.mp4" },
       { label: "Burger Promo", videoSrc: "/motion-graphics/burger-motion-flyer.mp4" },
+      { label: "Gianfri Flyer", videoSrc: "/motion-graphics/flyer-1.mp4" },
+      { label: "Pink Flyer", videoSrc: "/motion-graphics/flyer-2.mp4" },
     ],
-    cardLabels: ["Event Flyer", "Promo Loop", "Sale Ad"],
+    cardLabels: ["Event Flyer", "Promo Loop", "Sale Ad", "Gianfri Flyer", "Pink Flyer"],
   },
   {
     id: 7,
