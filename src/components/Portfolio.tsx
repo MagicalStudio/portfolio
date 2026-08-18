@@ -24,11 +24,14 @@ const categories = [
     color: "#7c3aed",
     colorLight: "rgba(124,58,237,0.12)",
     gradient: "linear-gradient(135deg, #3b0764, #6d28d9)",
-    cardCount: 1,
+    cardCount: 4,
     cards: [
       { label: "Magical Edition", videoSrc: "/short-content/magical-edition.mp4" },
+      { label: "Empresa Fantasma", videoSrc: "/short-content/empresa-fantasma.mp4" },
+      { label: "Influencer Fútbol", videoSrc: "/short-content/influencer-futbol.mov" },
+      { label: "Talking Head", videoSrc: "/short-content/talking-head-2.mov" },
     ],
-    cardLabels: ["Magical Edition"],
+    cardLabels: ["Magical Edition", "Empresa Fantasma", "Influencer Fútbol", "Talking Head"],
   },
   {
     id: 2,
