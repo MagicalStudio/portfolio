@@ -37,16 +37,17 @@ const aiTools = [
 ];
 
 function ToolLogo({ tool, isSmall = false }: { tool: { name: string; logo: string }, isSmall?: boolean }) {
+  const needsZoom = tool.name === "Canva" || tool.name === "CapCut";
   return (
     <div
-      style={{ display: "flex", alignItems: "center", gap: isSmall ? "10px" : "16px", padding: isSmall ? "8px 16px" : "12px 24px", background: "transparent", border: "1px solid transparent", borderRadius: isSmall ? "14px" : "18px", flexShrink: 0, whiteSpace: "nowrap", transition: "all 0.3s ease", cursor: "default" }}
-      onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; el.style.transform = "translateY(-2px)"; }}
-      onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.background = "transparent"; el.style.borderColor = "transparent"; el.style.transform = "translateY(0)"; }}
+      style={{ display: "flex", alignItems: "center", gap: isSmall ? "10px" : "20px", padding: isSmall ? "9px 18px" : "20px 40px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: isSmall ? "14px" : "18px", flexShrink: 0, whiteSpace: "nowrap", transition: "all 0.3s ease", cursor: "default" }}
+      onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.background = "rgba(124,58,237,0.08)"; el.style.borderColor = "rgba(124,58,237,0.28)"; el.style.transform = "translateY(-2px)"; }}
+      onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.background = "rgba(255,255,255,0.03)"; el.style.borderColor = "rgba(255,255,255,0.06)"; el.style.transform = "translateY(0)"; }}
     >
-      <div style={{ width: isSmall ? "32px" : "56px", height: isSmall ? "32px" : "56px", borderRadius: isSmall ? "8px" : "14px", overflow: "hidden", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <img src={tool.logo} alt={tool.name} style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.15)" }} onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+      <div style={{ width: isSmall ? "28px" : "64px", height: isSmall ? "28px" : "64px", borderRadius: isSmall ? "7px" : "14px", overflow: "hidden", flexShrink: 0, background: "rgba(255,255,255,0.05)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <img src={tool.logo} alt={tool.name} style={{ width: "100%", height: "100%", objectFit: "cover", transform: needsZoom ? "scale(1.6)" : "scale(1)" }} onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
       </div>
-      <span style={{ color: "rgba(255,255,255,0.85)", fontSize: isSmall ? "0.9rem" : "1.2rem", fontWeight: 600, fontFamily: "'Outfit',sans-serif", letterSpacing: "0.01em" }}>{tool.name}</span>
+      <span style={{ color: "rgba(255,255,255,0.72)", fontSize: isSmall ? "0.85rem" : "1.35rem", fontWeight: 600, fontFamily: "'Outfit',sans-serif" }}>{tool.name}</span>
     </div>
   );
 }
