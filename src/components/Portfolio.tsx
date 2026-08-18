@@ -200,12 +200,12 @@ const categories = [
     cards: [
       { label: "AI Living Moment", videoSrc: "/ai-content/ai-2.mp4" },
       { label: "Children Talking", videoSrc: "/ai-content/ai-3.mp4" },
+      { label: "Messi Guitarra", videoSrc: "/ai-content/ai-7.mp4" },
       { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4" },
       { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4" },
       { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
-      { label: "Messi Guitarra", videoSrc: "/ai-content/ai-7.mp4" },
     ],
-    cardLabels: ["AI Living Moment", "Children Talking", "Skydiving AI", "Gato Hielo", "Gatos Podcast AI", "Messi Guitarra"],
+    cardLabels: ["AI Living Moment", "Children Talking", "Messi Guitarra", "Skydiving AI", "Gato Hielo", "Gatos Podcast AI"],
   },
 ];
 
