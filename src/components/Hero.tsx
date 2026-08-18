@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import { Zap, Users, Languages, ArrowRight, ChevronDown } from "lucide-react";
+import { Zap, Users, Languages, ChevronDown, PlayCircle, Sparkles } from "lucide-react";
 import { useLang } from "@/context/LangContext";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -225,17 +225,23 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.92, duration: 0.6 }}
-            style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}
+            style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "10px" }}
           >
-            <motion.a href="#contact" whileHover={{ scale: 1.04, boxShadow: "0 8px 40px rgba(124,58,237,0.55)" }} whileTap={{ scale: 0.97 }}
-              style={{ padding: "14px 30px", background: "linear-gradient(135deg,#7c3aed,#06b6d4)", color: "#fff", textDecoration: "none", borderRadius: "100px", fontWeight: 700, fontSize: "0.93rem", boxShadow: "0 4px 24px rgba(124,58,237,0.4)", display: "inline-flex", alignItems: "center", gap: "8px", fontFamily: "'Outfit',sans-serif" }}
+            <motion.a href="#portfolio" whileHover={{ scale: 1.04, boxShadow: "0 8px 40px rgba(124,58,237,0.55)" }} whileTap={{ scale: 0.97 }}
+              style={{ padding: "15px 32px", background: "linear-gradient(135deg, #7c3aed, #06b6d4)", color: "#fff", textDecoration: "none", borderRadius: "100px", fontWeight: 700, fontSize: "0.95rem", display: "inline-flex", alignItems: "center", gap: "10px", fontFamily: "'Outfit',sans-serif", position: "relative", overflow: "hidden", border: "1px solid rgba(255,255,255,0.2)" }}
             >
-              {t("Let's Work Together", "Trabajemos Juntos")} <ArrowRight size={15} />
+              {/* Shimmer effect */}
+              <div style={{ position: "absolute", top: 0, left: "-100%", width: "50%", height: "100%", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)", animation: "shimmer 3s infinite" }} />
+              
+              <PlayCircle size={18} fill="#fff" color="#7c3aed" />
+              {t("Explore Portfolio", "Explorar Portafolio")}
             </motion.a>
-            <motion.a href="#portfolio" whileHover={{ scale: 1.04, background: "rgba(124,58,237,0.1)" }} whileTap={{ scale: 0.97 }}
-              style={{ padding: "14px 30px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.85)", textDecoration: "none", borderRadius: "100px", fontWeight: 600, fontSize: "0.93rem", display: "inline-flex", alignItems: "center", gap: "8px", backdropFilter: "blur(10px)", fontFamily: "'Outfit',sans-serif" }}
+
+            <motion.a href="#services" whileHover={{ scale: 1.04, background: "rgba(255,255,255,0.06)", borderColor: "rgba(124,58,237,0.3)" }} whileTap={{ scale: 0.97 }}
+              style={{ padding: "15px 32px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", textDecoration: "none", borderRadius: "100px", fontWeight: 600, fontSize: "0.95rem", display: "inline-flex", alignItems: "center", gap: "10px", backdropFilter: "blur(12px)", fontFamily: "'Outfit',sans-serif", transition: "all 0.3s ease" }}
             >
-              {t("View My Work", "Ver Mi Trabajo")}
+              <Sparkles size={16} color="#06b6d4" />
+              {t("My Services", "Mis Servicios")}
             </motion.a>
           </motion.div>
         </motion.div>
@@ -253,6 +259,7 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 640px) { .hero-bio-grid { grid-template-columns: 1fr !important; } }
+        @keyframes shimmer { 0% { left: -100%; } 100% { left: 200%; } }
       `}</style>
     </section>
   );
