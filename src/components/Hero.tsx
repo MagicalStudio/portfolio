@@ -90,7 +90,7 @@ export default function Hero() {
               <div style={{ borderRadius: "18px", overflow: "hidden", aspectRatio: "3/4", background: "rgba(10,10,26,0.5)", position: "relative" }}>
                 <Image 
                   src="/profile.png" 
-                  alt="Juan Guevara" 
+                  alt="Jesus Monsalve" 
                   fill 
                   priority
                   style={{ objectFit: "cover", objectPosition: "top center" }} 
@@ -124,7 +124,7 @@ export default function Hero() {
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.7 }}
             style={{ fontFamily: "'Outfit',sans-serif", fontSize: "clamp(2.8rem,5vw,5rem)", fontWeight: 900, lineHeight: 1.04, color: "#f8fafc", margin: "0 0 14px", letterSpacing: "-0.025em" }}
           >
-            Juan Guevara
+            Jesus Monsalve
           </motion.h1>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.62, duration: 0.6 }}

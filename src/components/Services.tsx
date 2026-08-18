@@ -22,8 +22,8 @@ const services = [
   },
   {
     icon: Palette,
-    en: { title: "Graphic Design", tools: "Photoshop · Illustrator · InDesign", items: ["Branding & visual identity", "Thumbnails & social media", "Magazine layouts & infographics", "Print-ready assets", "Photo manipulation & retouching"] },
-    es: { title: "Diseño Gráfico", tools: "Photoshop · Illustrator · InDesign", items: ["Branding e identidad visual", "Thumbnails y redes sociales", "Layouts de revista e infografías", "Activos para impresión", "Manipulación y retoque de fotos"] },
+    en: { title: "Graphic Design", tools: "Photoshop · Illustrator · InDesign · Canva", items: ["Branding & visual identity", "Thumbnails & social media", "Magazine layouts & infographics", "Print-ready assets", "Photo manipulation & retouching"] },
+    es: { title: "Diseño Gráfico", tools: "Photoshop · Illustrator · InDesign · Canva", items: ["Branding e identidad visual", "Thumbnails y redes sociales", "Layouts de revista e infografías", "Activos para impresión", "Manipulación y retoque de fotos"] },
     color: "#ec4899", colorLight: "rgba(236,72,153,0.12)",
   },
   {
@@ -34,8 +34,8 @@ const services = [
   },
   {
     icon: BarChart3,
-    en: { title: "Social Media & Strategy", tools: "Canva · Analytics · AI Tools", items: ["Social media carousels", "Presentation design", "Trend research & viral strategy", "Script writing", "Content calendars"] },
-    es: { title: "Redes Sociales y Estrategia", tools: "Canva · Analytics · AI Tools", items: ["Carruseles para redes sociales", "Diseño de presentaciones", "Investigación de tendencias y estrategia viral", "Escritura de guiones", "Calendarios de contenido"] },
+    en: { title: "Social Media & Strategy", tools: "Notion · Metricool · Slack · Analytics", items: ["Social media carousels", "Presentation design", "Trend research & viral strategy", "Script writing", "Content calendars"] },
+    es: { title: "Redes Sociales y Estrategia", tools: "Notion · Metricool · Slack · Analytics", items: ["Carruseles para redes sociales", "Diseño de presentaciones", "Investigación de tendencias y estrategia viral", "Escritura de guiones", "Calendarios de contenido"] },
     color: "#10b981", colorLight: "rgba(16,185,129,0.12)",
   },
   {

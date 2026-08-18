@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Brand & Bio */}
           <div>
             <h2 style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 900, fontSize: "1.8rem", color: "#f8fafc", margin: "0 0 16px", letterSpacing: "-0.03em" }}>
-              JG <span style={{ color: "rgba(255,255,255,0.2)", fontWeight: 400 }}>|</span> <span style={{ fontSize: "1rem", fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>Portfolio</span>
+              JM <span style={{ color: "rgba(255,255,255,0.2)", fontWeight: 400 }}>|</span> <span style={{ fontSize: "1rem", fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>Portfolio</span>
             </h2>
             <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.9rem", lineHeight: 1.6, maxWidth: "340px", margin: 0 }}>
               {t(
@@ -35,8 +35,8 @@ export default function Footer() {
               {t("Let's work together", "Trabajemos juntos")}
             </h3>
             
-            <a href="mailto:contact@juanguevara.com" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "0.9rem", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#a78bfa"} onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.6)"}>
-              <Mail size={18} /> contact@juanguevara.com
+            <a href="mailto:contact@jesusmonsalve.com" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "0.9rem", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#a78bfa"} onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.6)"}>
+              <Mail size={18} /> contact@jesusmonsalve.com
             </a>
             <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "0.9rem", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#a78bfa"} onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.6)"}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> Instagram
@@ -50,7 +50,7 @@ export default function Footer() {
         {/* Copyright & Credit */}
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "20px" }}>
           <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.85rem", margin: 0 }}>
-            © {currentYear} Juan Guevara. {t("All rights reserved.", "Todos los derechos reservados.")}
+            © {currentYear} Jesus Monsalve. {t("All rights reserved.", "Todos los derechos reservados.")}
           </p>
 
           <a 

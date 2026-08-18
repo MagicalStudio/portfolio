@@ -24,8 +24,11 @@ const categories = [
     color: "#7c3aed",
     colorLight: "rgba(124,58,237,0.12)",
     gradient: "linear-gradient(135deg, #3b0764, #6d28d9)",
-    cardCount: 6,
-    cardLabels: ["Brand Spot", "Reel — 30s", "Product Ad", "TikTok Cut", "Story Ad", "Short Film"],
+    cardCount: 1,
+    cards: [
+      { label: "Magical Edition", videoSrc: "/short-content/magical-edition.mp4" },
+    ],
+    cardLabels: ["Magical Edition"],
   },
   {
     id: 2,
@@ -36,16 +39,13 @@ const categories = [
     color: "#10b981",
     colorLight: "rgba(16,185,129,0.12)",
     gradient: "linear-gradient(135deg, #064e3b, #059669)",
-    cardCount: 6,
+    cardCount: 3,
     cards: [
       { label: "Mr Beast Style", imageSrc: "/reels-covers/mr-beast.jpg" },
       { label: "Growth Strategy", imageSrc: "/reels-covers/growth-strategue.jpg" },
       { label: "TikTok Viral", imageSrc: "/reels-covers/tiktok.jpg" },
-      { label: "Story Cover" },
-      { label: "Promo Reel" },
-      { label: "Reaction Short" },
     ],
-    cardLabels: ["Podcast Clip", "Vlog Cover", "Tutorial Short", "Story Cover", "Promo Reel", "Reaction Short"],
+    cardLabels: ["Podcast Clip", "Vlog Cover", "Tutorial Short"],
   },
   {
     id: 3,
@@ -56,8 +56,15 @@ const categories = [
     color: "#06b6d4",
     colorLight: "rgba(6,182,212,0.12)",
     gradient: "linear-gradient(135deg, #0c4a6e, #0891b2)",
-    cardCount: 6,
-    cardLabels: ["Explainer", "Data Story", "Brand Doc", "Tutorial", "Timeline", "Infovideo"],
+    cardCount: 5,
+    cards: [
+      { label: "Wealthiest Edit", videoSrc: "/ai-content/ai-1.mp4" },
+      { label: "Custom PNG Edit", videoSrc: "/ai-content/ai-8.mp4" },
+      { label: "Vox Example 3", videoSrc: "/vox-style/Vox Example 3.mp4" },
+      { label: "Vox Example 4", videoSrc: "/vox-style/Vox example 4.mp4" },
+      { label: "Vox Example 5", videoSrc: "/vox-style/Vox example 5.mp4" },
+    ],
+    cardLabels: ["Wealthiest Edit", "Custom PNG Edit", "Vox Example 3", "Vox Example 4", "Vox Example 5"],
   },
   {
     id: 4,
@@ -106,16 +113,13 @@ const categories = [
     color: "#f59e0b",
     colorLight: "rgba(245,158,11,0.12)",
     gradient: "linear-gradient(135deg, #78350f, #d97706)",
-    cardCount: 6,
+    cardCount: 3,
     cards: [
       { label: "MMA Promo", videoSrc: "/motion-graphics/mma-motion-flyer.mp4" },
       { label: "Wine Ad", videoSrc: "/motion-graphics/wine-animated-flyer.mp4" },
       { label: "Burger Promo", videoSrc: "/motion-graphics/burger-motion-flyer.mp4" },
-      { label: "Launch Teaser" },
-      { label: "Concert Flyer" },
-      { label: "Brand Loop" },
     ],
-    cardLabels: ["Event Flyer", "Promo Loop", "Sale Ad", "Launch Teaser", "Concert Flyer", "Brand Loop"],
+    cardLabels: ["Event Flyer", "Promo Loop", "Sale Ad"],
   },
   {
     id: 7,
@@ -126,16 +130,14 @@ const categories = [
     color: "#ec4899",
     colorLight: "rgba(236,72,153,0.12)",
     gradient: "linear-gradient(135deg, #831843, #db2777)",
-    cardCount: 6,
+    cardCount: 4,
     cards: [
       { label: "Design 1", imageSrc: "/social-media/a1.jpg" },
       { label: "Design 2", imageSrc: "/social-media/a2.jpg" },
       { label: "Design 3", imageSrc: "/social-media/a3.jpg" },
       { label: "Design 4", imageSrc: "/social-media/a4.jpg" },
-      { label: "Brand Kit" },
-      { label: "Presentation" },
     ],
-    cardLabels: ["Carousel", "Magazine", "Infographic", "Poster", "Brand Kit", "Presentation"],
+    cardLabels: ["Carousel", "Magazine", "Infographic", "Poster"],
   },
   {
     id: 8,
@@ -170,7 +172,7 @@ const categories = [
     icon: Monitor,
     en: { title: "UI/UX Web Design", desc: "User-centered interfaces built with precision — from Figma prototypes to fully deployed websites in Webflow, Framer, and WordPress. Responsive, accessible, and conversion-optimized." },
     es: { title: "Diseño UI/UX Web", desc: "Interfaces centradas en el usuario construidas con precisión — desde prototipos en Figma hasta sitios web completamente desplegados en Webflow, Framer y WordPress. Responsivos, accesibles y optimizados para conversión." },
-    tools: ["Figma", "Webflow", "Framer"],
+    tools: ["Figma", "Webflow", "Framer", "Vercel", "GitHub", "WordPress"],
     color: "#8b5cf6",
     colorLight: "rgba(99,102,241,0.12)",
     gradient: "linear-gradient(135deg, #1e1b4b, #4338ca)",
@@ -194,18 +196,16 @@ const categories = [
     color: "#a78bfa",
     colorLight: "rgba(167,139,250,0.12)",
     gradient: "linear-gradient(135deg, #1e1b4b, #4f46e5)",
-    cardCount: 8,
+    cardCount: 6,
     cards: [
-      { label: "Wealthiest Edit", videoSrc: "/ai-content/ai-1.mp4" },
       { label: "AI Living Moment", videoSrc: "/ai-content/ai-2.mp4" },
       { label: "Children Talking", videoSrc: "/ai-content/ai-3.mp4" },
       { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4" },
       { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4" },
       { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
       { label: "Messi Guitarra", videoSrc: "/ai-content/ai-7.mp4" },
-      { label: "Custom PNG Edit", videoSrc: "/ai-content/ai-8.mp4" },
     ],
-    cardLabels: ["Wealthiest Edit", "AI Living Moment", "Children Talking", "Skydiving AI", "Gato Hielo", "Gatos Podcast AI", "Messi Guitarra", "Custom PNG Edit"],
+    cardLabels: ["AI Living Moment", "Children Talking", "Skydiving AI", "Gato Hielo", "Gatos Podcast AI", "Messi Guitarra"],
   },
 ];
 
@@ -344,11 +344,11 @@ function CategoryRow({ cat, index, onSelectMedia }: { cat: typeof categories[0];
   let cardWidth = 280;
   let cardHeight = 180;
   
-  if ([1, 2, 6, 10].includes(cat.id)) {
-    // Vertical videos/images (TikToks, Reels, Flyers, AI)
+  if ([1, 2, 3, 6, 10].includes(cat.id)) {
+    // Vertical videos/images (TikToks, Reels, Flyers, AI, Vox)
     cardWidth = 220;
     cardHeight = 360;
-  } else if ([3, 4, 5].includes(cat.id)) {
+  } else if ([4, 5].includes(cat.id)) {
     // Standard horizontal (YouTube)
     cardWidth = 320;
     cardHeight = 180;

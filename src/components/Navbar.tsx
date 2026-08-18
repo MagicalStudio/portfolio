@@ -44,7 +44,7 @@ export default function Navbar() {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
           {/* Logo */}
           <motion.a href="#hero" whileHover={{ scale: 1.02 }} style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "8px" }}>
-            <span style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 900, fontSize: "1.35rem", background: "linear-gradient(135deg,#a78bfa,#06b6d4)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>JG</span>
+            <span style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 900, fontSize: "1.35rem", background: "linear-gradient(135deg,#a78bfa,#06b6d4)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>JM</span>
             <span style={{ color: "rgba(255,255,255,0.2)", fontWeight: 300 }}>|</span>
             <span style={{ fontSize: "0.8rem", fontWeight: 400, color: "rgba(255,255,255,0.55)", fontFamily: "'Outfit',sans-serif" }}>Portfolio</span>
           </motion.a>
