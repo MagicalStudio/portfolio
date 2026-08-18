@@ -6,10 +6,10 @@ import { Globe, Menu, X, ChevronRight } from "lucide-react";
 import { useLang } from "@/context/LangContext";
 
 const navLinks = [
-  { en: "Home", es: "Inicio", href: "#home" },
-  { en: "Tools", es: "Herramientas", href: "#tools" },
-  { en: "Services", es: "Servicios", href: "#services" },
-  { en: "Work", es: "Trabajo", href: "#portfolio" },
+  { en: "Home", es: "Inicio", path: "home" },
+  { en: "Tools", es: "Herramientas", path: "tools" },
+  { en: "Services", es: "Servicios", path: "services" },
+  { en: "Work", es: "Trabajo", path: "portfolio" },
 ];
 
 export default function Navbar() {
@@ -22,6 +22,16 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.history.pushState(null, '', `/${id}`);
+    }
+  };
 
   return (
     <motion.nav
@@ -43,7 +53,7 @@ export default function Navbar() {
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
           {/* Logo */}
-          <motion.a href="#home" whileHover={{ scale: 1.02 }} style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "8px" }}>
+          <motion.a href="/home" onClick={(e) => handleScroll(e, "home")} whileHover={{ scale: 1.02 }} style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "8px" }}>
             <span style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 900, fontSize: "1.35rem", background: "linear-gradient(135deg,#a78bfa,#06b6d4)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>JM</span>
             <span style={{ color: "rgba(255,255,255,0.2)", fontWeight: 300 }}>|</span>
             <span style={{ fontSize: "0.8rem", fontWeight: 400, color: "rgba(255,255,255,0.55)", fontFamily: "'Outfit',sans-serif" }}>Portfolio</span>
@@ -52,7 +62,7 @@ export default function Navbar() {
           {/* Desktop */}
           <div className="hidden md:flex" style={{ alignItems: "center", gap: "4px" }}>
             {navLinks.map((link) => (
-              <motion.a key={link.href} href={link.href}
+              <motion.a key={link.path} href={`/${link.path}`} onClick={(e) => handleScroll(e, link.path)}
                 style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "0.875rem", padding: "8px 14px", borderRadius: "8px", transition: "all 0.2s ease", fontFamily: "'Outfit',sans-serif" }}
                 onMouseEnter={(e) => { (e.currentTarget).style.color = "#a78bfa"; (e.currentTarget).style.background = "rgba(124,58,237,0.08)"; }}
                 onMouseLeave={(e) => { (e.currentTarget).style.color = "rgba(255,255,255,0.6)"; (e.currentTarget).style.background = "transparent"; }}
@@ -107,9 +117,9 @@ export default function Navbar() {
             <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
               {navLinks.map((link, i) => (
                 <motion.a 
-                  key={link.href} 
-                  href={link.href} 
-                  onClick={() => setMobileOpen(false)}
+                  key={link.path} 
+                  href={`/${link.path}`} 
+                  onClick={(e) => { setMobileOpen(false); handleScroll(e, link.path); }}
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 + 0.05, type: "spring", stiffness: 300, damping: 25 }}
