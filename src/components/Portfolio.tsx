@@ -27,11 +27,11 @@ const categories = [
     cardCount: 4,
     cards: [
       { label: "Magical Edition", videoSrc: "/short-content/magical-edition.mp4" },
+      { label: "Talking Head", videoSrc: "/short-content/talking-head-2.mov" },
       { label: "Empresa Fantasma", videoSrc: "/short-content/empresa-fantasma.mp4" },
       { label: "Influencer Fútbol", videoSrc: "/short-content/influencer-futbol.mov" },
-      { label: "Talking Head", videoSrc: "/short-content/talking-head-2.mov" },
     ],
-    cardLabels: ["Magical Edition", "Empresa Fantasma", "Influencer Fútbol", "Talking Head"],
+    cardLabels: ["Magical Edition", "Talking Head", "Empresa Fantasma", "Influencer Fútbol"],
   },
   {
     id: 2,
