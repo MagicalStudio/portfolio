@@ -220,10 +220,6 @@ const categories = [
   },
 ];
 
-function ExampleCard({
-  label,
-  index,
-  color,
 interface ExampleCardProps {
   label: string;
   index: number;
