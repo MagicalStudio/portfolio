@@ -14,4 +14,4 @@ jobs:
         env:
           VERCEL_ORG_ID: team_8h6mDTKHrbmd2AZ63kpBoiFR
           VERCEL_PROJECT_ID: prj_FpGqVa9NFGp61AytxbquqOvv02or
-        run: vercel pull --yes --environment=production --token "vcp_4zUuhfW3wtg6CnJu0HpRzPlFv8raWzpaDjzcGknGMssZOGw8jB1STrnP" && vercel build --prod --token "vcp_4zUuhfW3wtg6CnJu0HpRzPlFv8raWzpaDjzcGknGMssZOGw8jB1STrnP" && vercel deploy --prebuilt --prod --token "vcp_4zUuhfW3wtg6CnJu0HpRzPlFv8raWzpaDjzcGknGMssZOGw8jB1STrnP"
+        run: vercel pull --yes --environment=production --token "${{ secrets.VERCEL_TOKEN }}" && vercel build --prod --token "${{ secrets.VERCEL_TOKEN }}" && vercel deploy --prebuilt --prod --token "${{ secrets.VERCEL_TOKEN }}"
