@@ -204,7 +204,7 @@ const categories = [
     cardCount: 12,
     cards: [
       { label: "AI Living Moment", videoSrc: "/ai-content/ai-2.mp4" },
-      { label: "AI VFX Replace", videoSrc: "/ai-content/ai-12.mp4" },
+      { label: "AI Background Replacement VFX", videoSrc: "/ai-content/ai-12.mp4" },
       { label: "AI Clone Avatar", videoSrc: "/ai-content/ai-14.mp4" },
       { label: "Man Vs Monster", videoSrc: "/ai-content/ai-9.mp4" },
       { label: "Children Talking", videoSrc: "/ai-content/ai-3.mp4" },
@@ -216,7 +216,7 @@ const categories = [
       { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4", orientation: "horizontal" },
       { label: "SpongeCat", videoSrc: "/ai-content/ai-10.mp4", orientation: "horizontal" },
     ],
-    cardLabels: ["AI Living Moment", "AI VFX Replace", "AI Clone Avatar", "Man Vs Monster", "Children Talking", "Messi Guitarra", "AI Characters", "Sal Stewart AI", "Gatos Podcast AI", "Skydiving AI", "Gato Hielo", "SpongeCat"],
+    cardLabels: ["AI Living Moment", "AI Background Replacement VFX", "AI Clone Avatar", "Man Vs Monster", "Children Talking", "Messi Guitarra", "AI Characters", "Sal Stewart AI", "Gatos Podcast AI", "Skydiving AI", "Gato Hielo", "SpongeCat"],
   },
 ];
 
