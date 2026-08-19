@@ -212,11 +212,11 @@ const categories = [
       { label: "AI Characters", videoSrc: "/ai-content/ai-11.mp4" },
       { label: "Sal Stewart AI", videoSrc: "/ai-content/ai-13.mp4" },
       { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
-      { label: "SpongeCat", videoSrc: "/ai-content/ai-10.mp4" },
       { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4", orientation: "horizontal" },
       { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4", orientation: "horizontal" },
+      { label: "SpongeCat", videoSrc: "/ai-content/ai-10.mp4", orientation: "horizontal" },
     ],
-    cardLabels: ["AI Living Moment", "AI VFX Replace", "AI Clone Avatar", "Man Vs Monster", "Children Talking", "Messi Guitarra", "AI Characters", "Sal Stewart AI", "Gatos Podcast AI", "SpongeCat", "Skydiving AI", "Gato Hielo"],
+    cardLabels: ["AI Living Moment", "AI VFX Replace", "AI Clone Avatar", "Man Vs Monster", "Children Talking", "Messi Guitarra", "AI Characters", "Sal Stewart AI", "Gatos Podcast AI", "Skydiving AI", "Gato Hielo", "SpongeCat"],
   },
 ];
 
