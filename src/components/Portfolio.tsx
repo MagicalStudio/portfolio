@@ -214,7 +214,7 @@ const categories = [
       { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
       { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4", orientation: "horizontal" },
       { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4", orientation: "horizontal" },
-      { label: "SpongeCat", videoSrc: "/ai-content/ai-10.mp4", orientation: "horizontal" },
+      { label: "SpongeCat", videoSrc: "/ai-content/ai-10.mp4", orientation: "horizontal", objectFit: "contain" },
     ],
     cardLabels: ["AI Living Moment", "AI Background Replacement VFX", "AI Clone Avatar", "Man Vs Monster", "Children Talking", "Messi Guitarra", "AI Characters", "Sal Stewart AI", "Gatos Podcast AI", "Skydiving AI", "Gato Hielo", "SpongeCat"],
   },
@@ -224,23 +224,20 @@ function ExampleCard({
   label,
   index,
   color,
-  gradient,
-  videoSrc,
-  imageSrc,
-  onSelect,
-  width = 200,
-  height = 150,
-}: {
+interface ExampleCardProps {
   label: string;
   index: number;
   color: string;
   gradient: string;
   videoSrc?: string;
   imageSrc?: string;
+  width: number;
+  height: number;
   onSelect?: () => void;
-  width?: number;
-  height?: number;
-}) {
+  objectFit?: "cover" | "contain";
+}
+
+function ExampleCard({ label, index, color, gradient, videoSrc, imageSrc, width, height, onSelect, objectFit = "cover" }: ExampleCardProps) {
   const [hovered, setHovered] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const hasMedia = !!(videoSrc || imageSrc);
@@ -307,7 +304,7 @@ function ExampleCard({
             controlsList="nodownload"
             disablePictureInPicture
             onLoadedData={() => setLoaded(true)}
-            style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0, display: "block", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease", zIndex: 2 }}
+            style={{ width: "100%", height: "100%", objectFit, position: "absolute", inset: 0, display: "block", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease", zIndex: 2 }}
           />
         ) : cardInView && imageSrc ? (
           <Image
@@ -318,7 +315,7 @@ function ExampleCard({
             onContextMenu={(e) => e.preventDefault()}
             draggable={false}
             onLoad={() => setLoaded(true)}
-            style={{ objectFit: "cover", objectPosition: "center", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease", zIndex: 2 }}
+            style={{ objectFit, objectPosition: "center", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease", zIndex: 2 }}
             sizes="(max-width: 768px) 300px, 400px"
             quality={75}
           />
@@ -488,6 +485,7 @@ function CategoryRow({ cat, index, onSelectMedia }: { cat: typeof categories[0];
                 imageSrc={card.imageSrc}
                 width={dynamicWidth}
                 height={dynamicHeight}
+                objectFit={card.objectFit}
                 onSelect={cat.id === 3 ? undefined : () => (card.videoSrc || card.imageSrc) && onSelectMedia({ 
                   src: card.videoSrc || card.imageSrc, 
                   type: card.videoSrc ? "video" : "image", 
