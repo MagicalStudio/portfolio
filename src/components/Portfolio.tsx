@@ -79,12 +79,13 @@ const categories = [
     color: "#ef4444",
     colorLight: "rgba(239,68,68,0.12)",
     gradient: "linear-gradient(135deg, #7f1d1d, #dc2626)",
-    cardCount: 2,
+    cardCount: 3,
     cards: [
       { label: "Professional Podcast Edit", videoSrc: "/youtube-longform/podcast-edit.mov" },
-      { label: "Talking Head Long Form", videoSrc: "/youtube-longform/youtube-video-2.mov" }
+      { label: "Talking Head Long Form", videoSrc: "/youtube-longform/youtube-video-2.mov" },
+      { label: "Travel Blogs", videoSrc: "/youtube-longform/travel-blogs.mp4" }
     ],
-    cardLabels: ["Professional Podcast Edit", "Talking Head Long Form"],
+    cardLabels: ["Professional Podcast Edit", "Talking Head Long Form", "Travel Blogs"],
   },
   {
     id: 5,
