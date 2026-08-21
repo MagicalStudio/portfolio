@@ -26,12 +26,12 @@ const categories = [
     gradient: "linear-gradient(135deg, #3b0764, #6d28d9)",
     cardCount: 4,
     cards: [
-      { label: "Magical Edition", videoSrc: "/short-content/magical-edition.mp4" },
+      { label: "Business Presentation", videoSrc: "/short-content/magical-edition.mp4" },
       { label: "Talking Head", videoSrc: "/short-content/talking-head-2.mov" },
       { label: "Empresa Fantasma", videoSrc: "/short-content/empresa-fantasma.mp4" },
       { label: "Influencer Fútbol", videoSrc: "/short-content/influencer-futbol.mov" },
     ],
-    cardLabels: ["Magical Edition", "Talking Head", "Empresa Fantasma", "Influencer Fútbol"],
+    cardLabels: ["Business Presentation", "Talking Head", "Empresa Fantasma", "Influencer Fútbol"],
   },
   {
     id: 2,
