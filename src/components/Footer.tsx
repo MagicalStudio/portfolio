@@ -56,40 +56,6 @@ export default function Footer() {
             © {currentYear} Jesus Monsalve. {t("All rights reserved.", "Todos los derechos reservados.")}
           </p>
 
-          <a 
-            href="https://nexocodestudio.netlify.app/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{ 
-              display: "flex", 
-              alignItems: "center", 
-              gap: "8px", 
-              padding: "8px 16px", 
-              borderRadius: "100px", 
-              background: "rgba(255,255,255,0.03)", 
-              border: "1px solid rgba(255,255,255,0.08)", 
-              color: "rgba(255,255,255,0.5)", 
-              fontSize: "0.8rem", 
-              textDecoration: "none",
-              transition: "all 0.3s ease",
-              backdropFilter: "blur(10px)"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "rgba(255,255,255,0.08)";
-              e.currentTarget.style.color = "#fff";
-              e.currentTarget.style.borderColor = "rgba(124,58,237,0.3)";
-              e.currentTarget.style.boxShadow = "0 4px 15px rgba(124,58,237,0.15)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "rgba(255,255,255,0.03)";
-              e.currentTarget.style.color = "rgba(255,255,255,0.5)";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-          >
-            {t("Designed & Developed by", "Diseñado y Desarrollado por")} <strong style={{ color: "#a78bfa", fontWeight: 600 }}>Nexocode Studio</strong>
-            <ExternalLink size={12} style={{ opacity: 0.7 }} />
-          </a>
         </div>
       </div>
     </footer>
