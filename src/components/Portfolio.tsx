@@ -28,10 +28,10 @@ const categories = [
     cards: [
       { label: "Business Presentation", videoSrc: "/short-content/magical-edition.mp4" },
       { label: "Talking Head", videoSrc: "/short-content/talking-head-2.mov" },
-      { label: "Empresa Fantasma", videoSrc: "/short-content/empresa-fantasma.mp4" },
-      { label: "Influencer Fútbol", videoSrc: "/short-content/influencer-futbol.mov" },
+      { label: "Ghost Company", videoSrc: "/short-content/empresa-fantasma.mp4" },
+      { label: "Football Influencer", videoSrc: "/short-content/influencer-futbol.mov" },
     ],
-    cardLabels: ["Business Presentation", "Talking Head", "Empresa Fantasma", "Influencer Fútbol"],
+    cardLabels: ["Business Presentation", "Talking Head", "Ghost Company", "Football Influencer"],
   },
   {
     id: 2,
@@ -80,10 +80,10 @@ const categories = [
     gradient: "linear-gradient(135deg, #7f1d1d, #dc2626)",
     cardCount: 2,
     cards: [
-      { label: "Dr. de la Alimentación", videoSrc: "/youtube-longform/podcast-edit.mov" },
+      { label: "Food Doctor", videoSrc: "/youtube-longform/podcast-edit.mov" },
       { label: "Best Podcast Setup", videoSrc: "/youtube-longform/youtube-video-2.mov" }
     ],
-    cardLabels: ["Interview", "Vlog Edit", "Review", "Tutorial", "Podcast", "Documentary"],
+    cardLabels: ["Food Doctor", "Best Podcast Setup"],
   },
   {
     id: 5,
@@ -208,15 +208,15 @@ const categories = [
       { label: "AI Clone Avatar", videoSrc: "/ai-content/ai-14.mp4" },
       { label: "Man Vs Monster", videoSrc: "/ai-content/ai-9.mp4" },
       { label: "Children Talking", videoSrc: "/ai-content/ai-3.mp4" },
-      { label: "Messi Guitarra", videoSrc: "/ai-content/ai-7.mp4" },
+      { label: "Messi Guitar", videoSrc: "/ai-content/ai-7.mp4" },
       { label: "AI Characters", videoSrc: "/ai-content/ai-11.mp4" },
       { label: "Sal Stewart AI", videoSrc: "/ai-content/ai-13.mp4" },
-      { label: "Gatos Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
+      { label: "Cats Podcast AI", videoSrc: "/ai-content/ai-6.mp4" },
       { label: "Skydiving AI", videoSrc: "/ai-content/ai-4.mp4", orientation: "horizontal" },
-      { label: "Gato Hielo", videoSrc: "/ai-content/ai-5.mp4", orientation: "horizontal" },
+      { label: "Ice Cat", videoSrc: "/ai-content/ai-5.mp4", orientation: "horizontal" },
       { label: "SpongeCat", videoSrc: "/ai-content/ai-10.mp4", orientation: "horizontal" },
     ],
-    cardLabels: ["AI Living Moment", "AI Background Replacement VFX", "AI Clone Avatar", "Man Vs Monster", "Children Talking", "Messi Guitarra", "AI Characters", "Sal Stewart AI", "Gatos Podcast AI", "Skydiving AI", "Gato Hielo", "SpongeCat"],
+    cardLabels: ["AI Living Moment", "AI Background Replacement VFX", "AI Clone Avatar", "Man Vs Monster", "Children Talking", "Messi Guitar", "AI Characters", "Sal Stewart AI", "Cats Podcast AI", "Skydiving AI", "Ice Cat", "SpongeCat"],
   },
 ];
 
