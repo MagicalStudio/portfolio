@@ -24,14 +24,15 @@ const categories = [
     color: "#7c3aed",
     colorLight: "rgba(124,58,237,0.12)",
     gradient: "linear-gradient(135deg, #3b0764, #6d28d9)",
-    cardCount: 4,
+    cardCount: 5,
     cards: [
       { label: "Business Presentation", videoSrc: "/short-content/magical-edition.mp4" },
       { label: "Talking Head", videoSrc: "/short-content/talking-head-2.mov" },
       { label: "Ghost Company", videoSrc: "/short-content/empresa-fantasma.mp4" },
+      { label: "Realtors Edits", videoSrc: "/short-content/realtors-edits.mp4" },
       { label: "Football Influencer", videoSrc: "/short-content/influencer-futbol.mov" },
     ],
-    cardLabels: ["Business Presentation", "Talking Head", "Ghost Company", "Football Influencer"],
+    cardLabels: ["Business Presentation", "Talking Head", "Ghost Company", "Realtors Edits", "Football Influencer"],
   },
   {
     id: 2,
