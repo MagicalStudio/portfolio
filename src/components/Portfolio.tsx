@@ -94,7 +94,7 @@ const categories = [
     color: "#f97316",
     colorLight: "rgba(249,115,22,0.12)",
     gradient: "linear-gradient(135deg, #7c2d12, #ea580c)",
-    cardCount: 8,
+    cardCount: 7,
     cards: [
       { label: "Legendary Riffs", imageSrc: "/youtube-thumbnails/1.jpg" },
       { label: "Neighborhood Battle", imageSrc: "/youtube-thumbnails/2.jpg" },
@@ -102,10 +102,9 @@ const categories = [
       { label: "Ketogenic Diet", imageSrc: "/youtube-thumbnails/4.jpg" },
       { label: "LinkedIn Design", imageSrc: "/youtube-thumbnails/5.jpg" },
       { label: "PC Building Sim", imageSrc: "/youtube-thumbnails/6.jpg" },
-      { label: "Thumbnail Masterclass", imageSrc: "/youtube-thumbnails/7.jpg" },
       { label: "Zuck vs Musk", imageSrc: "/youtube-thumbnails/8.jpg" },
     ],
-    cardLabels: ["Legendary Riffs", "Neighborhood Battle", "Pay Taxes Legally", "Ketogenic Diet", "LinkedIn Design", "PC Building Sim", "Thumbnail Masterclass", "Zuck vs Musk"],
+    cardLabels: ["Legendary Riffs", "Neighborhood Battle", "Pay Taxes Legally", "Ketogenic Diet", "LinkedIn Design", "PC Building Sim", "Zuck vs Musk"],
   },
   {
     id: 6,
