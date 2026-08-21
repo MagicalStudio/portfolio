@@ -17,6 +17,8 @@ const tools = [
   { name: "Webflow", logo: "/tools/webflow.jpg" },
   { name: "Framer", logo: "/tools/framer.jpg" },
   { name: "WordPress", logo: "/tools/wordpress.png" },
+  { name: "GitHub", logo: "/tools/github.png" },
+  { name: "Vercel", logo: "/tools/vercel.png" },
 ];
 
 const aiTools = [
