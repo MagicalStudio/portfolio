@@ -80,10 +80,10 @@ const categories = [
     gradient: "linear-gradient(135deg, #7f1d1d, #dc2626)",
     cardCount: 2,
     cards: [
-      { label: "Food Doctor", videoSrc: "/youtube-longform/podcast-edit.mov" },
-      { label: "Best Podcast Setup", videoSrc: "/youtube-longform/youtube-video-2.mov" }
+      { label: "Professional Podcast Edit", videoSrc: "/youtube-longform/podcast-edit.mov" },
+      { label: "Talking Head Long Form", videoSrc: "/youtube-longform/youtube-video-2.mov" }
     ],
-    cardLabels: ["Food Doctor", "Best Podcast Setup"],
+    cardLabels: ["Professional Podcast Edit", "Talking Head Long Form"],
   },
   {
     id: 5,
